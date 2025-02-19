@@ -14,14 +14,13 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/Product",
+        path: "Product/:productId",
         element: <Product />,
       },
-
-      // {
-      //   path: "/*",
-      //   element: <NotFound />,
-      // },
+      {
+        path: "*",
+        element: <h1>404 - Not Found</h1>,
+      },
     ],
   },
 ]);
