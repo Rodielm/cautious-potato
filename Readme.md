@@ -1,4 +1,4 @@
-# Proyecto Full-Stack
+# Full-Stack Project
 
 This repository contains a technical test with a backend developed in **Spring Boot (Java)** and a frontend developed in **React**.
 
