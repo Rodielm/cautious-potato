@@ -28,12 +28,12 @@ const ProductCard = ({ product }) => {
           </span>
         </CardContent>
       </Link>
-      <CardFooter>
+      {/* <CardFooter>
         <div className="flex gap-2">
           <Button onClick={() => console.log("Add Card")}>Add Card</Button>
           <Button onClick={() => console.log("Buy Product")}>Buy</Button>
         </div>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   );
 };
