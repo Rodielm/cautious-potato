@@ -1,21 +1,18 @@
-import { Search } from "lucide-react";
-import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { useCart } from "@/contexts/cartContext";
 
 const SearchBar = () => {
-  const handleSearch = (e) => {
-    console.log("OnClick search");
-  };
+  const { search, setSearch } = useCart();
+
   return (
     <div className="flex gap-2">
       <Input
         className="flex-1"
         type="text"
-        placeholder="Search by products..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Search by name or brand..."
       />
-      <Button onClick={handleSearch}>
-        <Search className="w-4 h-4 mr-2" />
-      </Button>
     </div>
   );
 };
