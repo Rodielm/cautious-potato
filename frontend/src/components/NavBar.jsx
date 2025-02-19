@@ -8,9 +8,11 @@ import {
   BreadcrumbSeparator,
 } from "./ui/breadcrumb";
 import { Fragment } from "react";
+import { useCart } from "@/contexts/cartContext";
 
 const Navbar = () => {
   const location = useLocation();
+  const { cartCount } = useCart();
   const pathnames = location.pathname.split("/").filter((x) => x);
   return (
     <>
@@ -23,7 +25,7 @@ const Navbar = () => {
         </div>
         <div className="flex flex-1 items-center justify-between gap-1 md:justify-end">
           <ShoppingCart />
-          <div>5</div>
+          <div>{cartCount}</div>
         </div>
       </header>
 
